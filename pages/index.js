@@ -1,65 +1,50 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import { useState } from "react";
+import MarketTable from "../components/Table/MarketTable";
+import SearchInput from "../components/SearchInput/SearchInput";
+import useSWR from "swr";
+
+const fetcher = (url) => fetch(url).then((r) => r.json());
+
+let cars = "Mustang";
 
 export default function Home() {
+  const [keyword, setKeyword] = useState("");
+  const { data, error } = useSWR("/api/bitkub", fetcher, {
+    refreshInterval: 2000,
+  });
+
+  const cryptos = Object.keys(data || {}).map((v) => ({
+    ...data[v],
+    symbol: v,
+    image: cars,
+  }));
+
+  cryptos.sort((a, b) => a.id - b.id);
+
+  const filterSymbol = cryptos.filter((sym) =>
+    sym.symbol.toLowerCase().includes(keyword)
+  );
+
+  const onInputChange = (e) => {
+    e.preventDefault();
+    setKeyword(e.target.value.toLowerCase());
+  };
+
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+    <div className="container mx-auto px-16">
+      <div className="">
+        <div className="flex justify-center">
+          <img src="/Bitkub-icon.jpg" className="h-24" />
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+        <p className="w-auto gray-200 text-lg">
+          Cryptos{" "}
+          <span className="bg-green-400 text-white rounded-lg px-3.5">
+            {cryptos.length}
+          </span>
+        </p>
+        <SearchInput onChange={onInputChange} />
+      </div>
+      <MarketTable symbols={filterSymbol} />
     </div>
-  )
+  );
 }

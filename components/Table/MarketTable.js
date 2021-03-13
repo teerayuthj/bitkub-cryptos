@@ -60,17 +60,22 @@ const MarketTable = ({ symbols }) => {
   };
 
   return (
-    <Layout className="mt-10">
+    <Layout className="mt-10 ">
       <div className="container-table mb-20">
         <table className="border-none container ">
           <thead className="border-b-2 border-fuchsia-600">
             <tr>
+              <th className="py-4 px-8 flex">
+                <button className="inline-flex focus:outline-none">
+                  <div className="font-extrabold">Name</div>
+                </button>
+              </th>
               <th className="p-4">
                 <button
                   onClick={() => setValueAndDirection("symbol")}
                   className="inline-flex focus:outline-none"
                 >
-                  <div className="font-extrabold">Name</div>
+                  <div className="font-extrabold">Symbol</div>
                   {value === "symbol" && <SortArrow direction={direction} />}
                 </button>
               </th>
@@ -125,13 +130,19 @@ const MarketTable = ({ symbols }) => {
               </th>
             </tr>
           </thead>
+
           <tbody>
             {orderSymbol.map((sym) => (
               <tr
-                key={sym.symbol}
-                className="border-b border-fuchsia-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:bg-gray-100 focus:ring-opacity-50"
+                key={sym.id}
+                className="border-b border-fuchsia-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:bg-gray-100 focus:ring-opacity-50 font-medium"
               >
-                <th className="font-medium p-6 ">{sym.symbol.slice(4, 7)}</th>
+                <th className="inline-flex items-center py-4 px-8">
+                  <img className="max-h-9" src={sym.src}></img>
+                  <p className="font-medium p-2"> {sym.name} </p>
+                </th>
+
+                <th className="font-medium p-6">{sym.symbol.slice(4, 8)}</th>
                 <th
                   className="font-medium"
                   style={{

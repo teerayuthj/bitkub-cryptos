@@ -66,8 +66,12 @@ const MarketTable = ({ symbols }) => {
           <thead className="border-b-2 border-fuchsia-600">
             <tr>
               <th className="py-4 px-8 flex">
-                <button className="inline-flex focus:outline-none">
+                <button
+                  className="inline-flex focus:outline-none"
+                  onClick={() => setValueAndDirection("name")}
+                >
                   <div className="font-extrabold">Name</div>
+                  {value === "name" && <SortArrow direction={direction} />}
                 </button>
               </th>
               <th className="p-4">

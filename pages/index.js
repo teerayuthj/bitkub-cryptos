@@ -20,11 +20,11 @@ export default function Home() {
 
   cryptos.sort((a, b) => a.id - b.id);
 
-  let combineCoin = cryptos.map((item, i) =>
+  let mergeCoin = cryptos.map((item, i) =>
     Object.assign({}, item, CryptoIcons[i])
   );
 
-  const filterSymbol = combineCoin.filter(
+  const filterCryptos = mergeCoin.filter(
     (sym) =>
       sym.symbol.toLowerCase().includes(keyword) ||
       sym.name.toLowerCase().includes(keyword)
@@ -50,7 +50,7 @@ export default function Home() {
           </p>
           <SearchInput onChange={onInputChange} />
         </div>
-        <MarketTable symbols={filterSymbol} />
+        <MarketTable symbols={filterCryptos} />
       </div>
     </Layout>
   );

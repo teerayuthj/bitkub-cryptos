@@ -6,7 +6,7 @@ const SearchInput = ({ ...rest }) => {
       <div>
         <input
           type="text"
-          placeholder="Filter by symbol"
+          placeholder="Filter by Name, Symbol"
           className="border border-green-400 focus:border-green-400 container-app"
           {...rest}
         />

@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Layout = styled.div`
   .container-table {
     margin-top: 5rem;
-    max-width: auto;
     overflow-x: auto;
     padding-left: 10px;
     width: 100%;
@@ -19,7 +18,6 @@ export const Layout = styled.div`
       padding: 0 !important;
       padding-left: 0 !important;
       padding-right: 0 !important;
-      // max-width: 0 !important;
     }
   }
 `;

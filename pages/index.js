@@ -1,16 +1,20 @@
 import { useState } from "react";
-import MarketTable from "../components/Table/MarketTable";
-import SearchInput from "../components/SearchInput/SearchInput";
+import dynamic from "next/dynamic";
 import useSWR from "swr";
-import { Layout } from "../styles/style";
+import { Layout } from "../styles/styles";
 import { CryptoIcons } from "../libs/data";
+
+const MarketTable = dynamic(() => import("../components/Table/MarketTable"));
+const SearchInput = dynamic(() =>
+  import("../components/SearchInput/SearchInput")
+);
 
 const fetcher = (url) => fetch(url).then((r) => r.json());
 
 export default function Home() {
   const [keyword, setKeyword] = useState("");
   const { data, error } = useSWR("/api/bitkub", fetcher, {
-    refreshInterval: 2000,
+    refreshInterval: 1000,
   });
 
   const cryptos = Object.keys(data || {}).map((v) => ({
@@ -20,7 +24,7 @@ export default function Home() {
 
   cryptos.sort((a, b) => a.id - b.id);
 
-  let mergeCoin = cryptos.map((item, i) =>
+  const mergeCoin = cryptos.map((item, i) =>
     Object.assign({}, item, CryptoIcons[i])
   );
 

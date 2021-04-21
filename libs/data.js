@@ -124,8 +124,16 @@ export const CryptoIcons = [
     src: "/icons/bat.png",
   },
   {
+    name: "Maker",
+    src: "/icons/mkr.png",
+  },
+  {
     name: "Band Protocol",
     src: "/icons/band.png",
+  },
+  {
+    name: "COMp",
+    src: "/icons/comp.png",
   },
   {
     name: "Kusama",
@@ -146,5 +154,17 @@ export const CryptoIcons = [
   {
     name: "Golem",
     src: "/icons/glm.png",
+  },
+  {
+    name: "yearn.finance",
+    src: "/icons/yfi.png",
+  },
+  {
+    name: "Uniswap",
+    src: "/icons/uni.png",
+  },
+  {
+    name: "AAVE",
+    src: "/icons/aave.png",
   },
 ];

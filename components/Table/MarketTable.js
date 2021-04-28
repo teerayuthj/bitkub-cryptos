@@ -65,7 +65,7 @@ const MarketTable = ({ symbols }) => {
         <table className="border-none container ">
           <thead className="border-b-2 border-fuchsia-600">
             <tr>
-              <th className="py-4 px-8 flex">
+              <th className="py-4 px-8 flex whitespace-normal">
                 <button
                   className="inline-flex focus:outline-none"
                   onClick={() => setValueAndDirection("name")}

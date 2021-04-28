@@ -152,13 +152,14 @@ export const CryptoIcons = [
     src: "/icons/scrt.png",
   },
   {
-    name: "Golem",
-    src: "/icons/glm.png",
-  },
-  {
     name: "yearn.finance",
     src: "/icons/yfi.png",
   },
+  {
+    name: "Golem",
+    src: "/icons/glm.png",
+  },
+
   {
     name: "Uniswap",
     src: "/icons/uni.png",
@@ -166,5 +167,9 @@ export const CryptoIcons = [
   {
     name: "AAVE",
     src: "/icons/aave.png",
+  },
+  {
+    name: "Alpha Finance Lab",
+    src: "/icons/alpha.png",
   },
 ];

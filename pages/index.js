@@ -46,7 +46,7 @@ export default function Home() {
           <div className="flex justify-center">
             <img src="/Bitkub-icon.jpg" className="h-24" />
           </div>
-          <p className="w-auto gray-200 text-lg">
+          <p className="w-auto gray-200 text-lg lg:ml-0 ml-4">
             Cryptos{" "}
             <span className="bg-green-400 text-white rounded-lg px-3.5">
               {cryptos.length}

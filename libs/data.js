@@ -80,10 +80,6 @@ export const CryptoIcons = [
     src: "/icons/mana.png",
   },
   {
-    name: "Infinitus Token",
-    src: "/icons/inf.png",
-  },
-  {
     name: "Stellar",
     src: "/icons/xlm.png",
   },
@@ -152,14 +148,13 @@ export const CryptoIcons = [
     src: "/icons/scrt.png",
   },
   {
-    name: "yearn.finance",
-    src: "/icons/yfi.png",
-  },
-  {
     name: "Golem",
     src: "/icons/glm.png",
   },
-
+  {
+    name: "yearn.finance",
+    src: "/icons/yfi.png",
+  },
   {
     name: "Uniswap",
     src: "/icons/uni.png",

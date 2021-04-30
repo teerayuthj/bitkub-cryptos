@@ -124,6 +124,10 @@ export const CryptoIcons = [
     src: "/icons/mkr.png",
   },
   {
+    name: "Enjin Coin",
+    src: "/icons/enj.png",
+  },
+  {
     name: "Band Protocol",
     src: "/icons/band.png",
   },

@@ -171,4 +171,8 @@ export const CryptoIcons = [
     name: "Alpha Finance Lab",
     src: "/icons/alpha.png",
   },
+  {
+    name: "Curve DAO Token",
+    src: "/icons/crv.png",
+  },
 ];

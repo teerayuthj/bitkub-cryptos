@@ -43,7 +43,7 @@ export default function Home() {
     <Layout>
       <div className="container mx-auto px-16 container-index-moblie">
         <div className="">
-          <div className="flex justify-center">
+          <div className="flex justify-center h-24">
             <img src="/Bitkub-icon.jpg" className="h-24" />
           </div>
           <p className="w-auto gray-200 text-lg lg:ml-0 ml-4">

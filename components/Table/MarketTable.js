@@ -6,6 +6,45 @@ export const IntlFormatNumber = (coin) => {
   return new Intl.NumberFormat("th-TH").format(coin);
 };
 
+function financial(x) {
+  return Number.parseFloat(x).toFixed(2);
+}
+
+function ChangeCoin(props) {
+  let { Change } = props;
+
+  if (Change == 0) {
+    return (
+      <div className="">
+        <span className=" px-3.5 py-1.5 text-xs text-white bg-gray-500 rounded-sm">
+          <span className="text-center">{financial(Change)}0%</span>
+        </span>
+      </div>
+    );
+  }
+
+  if (Change > 0) {
+    return (
+      <div className="">
+        <span className="px-3.5 py-2 Change-Fix text-xs text-white bg-green-500 rounded-sm">
+          <span className="text-center">+{financial(Change)}%</span>
+        </span>
+      </div>
+    );
+  }
+
+  if (Change < 0)
+    return (
+      <div className="">
+        <span className="px-3.5 py-2 Change-Fix text-xs text-white bg-red-500 rounded-sm">
+          <span className="text-center">{financial(Change)}%</span>
+        </span>
+      </div>
+    );
+
+  return null; // Fixed!
+}
+
 const orderBy = (symbols, value, direction) => {
   if (direction === "asc") {
     return [...symbols].sort((a, b) => (a[value] > b[value] ? 1 : -1));
@@ -150,7 +189,7 @@ const MarketTable = ({ symbols }) => {
                 <th
                   className="font-medium"
                   style={{
-                    color: sym.last - sym.prevOpen >= 0 ? "#019716" : "#e60000",
+                    color: sym.last - sym.prevOpen >= 0 ? "#10b981" : "#EF4424",
                   }}
                 >
                   {IntlFormatNumber(sym.last || 0)}
@@ -164,13 +203,8 @@ const MarketTable = ({ symbols }) => {
                 <th className="font-medium">
                   {IntlFormatNumber(sym.low24hr || 0)}
                 </th>
-                <th
-                  className="font-medium"
-                  style={{
-                    color: sym.percentChange >= 0 ? "#019716" : "#e60000",
-                  }}
-                >
-                  {IntlFormatNumber(sym.percentChange || 0)}%
+                <th className="font-medium">
+                  <ChangeCoin Change={financial(sym.percentChange || 0)} />
                 </th>
               </tr>
             ))}

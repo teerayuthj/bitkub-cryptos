@@ -14,7 +14,7 @@ const fetcher = (url) => fetch(url).then((r) => r.json());
 export default function Home() {
   const [keyword, setKeyword] = useState("");
   const { data, error } = useSWR("/api/bitkub", fetcher, {
-    refreshInterval: 1000,
+    refreshInterval: 2000,
   });
 
   const cryptos = Object.keys(data || {}).map((v) => ({

@@ -20,4 +20,7 @@ export const Layout = styled.div`
       padding-right: 0 !important;
     }
   }
+  .Change-Fix {
+    box-sizing: border-box;
+  }
 `;

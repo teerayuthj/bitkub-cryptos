@@ -172,6 +172,10 @@ export const CryptoIcons = [
     src: "/icons/alpha.png",
   },
   {
+    name: "Balancer",
+    src: "/icons/bal.png",
+  },
+  {
     name: "Curve DAO Token",
     src: "/icons/crv.png",
   },

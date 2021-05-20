@@ -179,4 +179,8 @@ export const CryptoIcons = [
     name: "Curve DAO Token",
     src: "/icons/crv.png",
   },
+  {
+    name: "Kub Coin",
+    src: "/icons/kub.png",
+  },
 ];

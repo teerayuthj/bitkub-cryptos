@@ -17,7 +17,7 @@ function ChangeCoin(props) {
     return (
       <div className="">
         <span className=" px-3.5 py-1.5 text-xs text-white bg-gray-500 rounded-sm">
-          <span className="text-center">{financial(Change)}0%</span>
+          <span className="text-center box-border">{financial(Change)}%</span>
         </span>
       </div>
     );
@@ -27,7 +27,7 @@ function ChangeCoin(props) {
     return (
       <div className="">
         <span className="px-3.5 py-2 Change-Fix text-xs text-white bg-green-500 rounded-sm">
-          <span className="text-center">+{financial(Change)}%</span>
+          <span className="text-center box-border">+{financial(Change)}%</span>
         </span>
       </div>
     );
@@ -37,7 +37,7 @@ function ChangeCoin(props) {
     return (
       <div className="">
         <span className="px-3.5 py-2 Change-Fix text-xs text-white bg-red-500 rounded-sm">
-          <span className="text-center">{financial(Change)}%</span>
+          <span className="text-center box-border">{financial(Change)}%</span>
         </span>
       </div>
     );

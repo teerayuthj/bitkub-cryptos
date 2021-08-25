@@ -1,7 +1,7 @@
-import "../styles/globals.css";
-import { useEffect } from "react";
-import "tailwindcss/tailwind.css";
-import Head from "next/head";
+import "../styles/globals.css"
+import { useEffect } from "react"
+import "tailwindcss/tailwind.css"
+import Head from "next/head"
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
@@ -12,15 +12,15 @@ function MyApp({ Component, pageProps }) {
             console.log(
               "Service Worker registration successful with scope: ",
               registration.scope
-            );
+            )
           },
           function(err) {
-            console.log("Service Worker registration failed: ", err);
+            console.log("Service Worker registration failed: ", err)
           }
-        );
-      });
+        )
+      })
     }
-  }, []);
+  }, [])
 
   return (
     <>
@@ -33,7 +33,7 @@ function MyApp({ Component, pageProps }) {
           </div>
         </div>
       </nav>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
       <footer className="flex items-center justify-center w-full h-20 relative bottom-0 top-auto  border-t mt-10 hover:text-red-500">
         <a
           className="flex items-center justify-center"
@@ -45,7 +45,7 @@ function MyApp({ Component, pageProps }) {
         </a>
       </footer>
     </>
-  );
+  )
 }
 
-export default MyApp;
+export default MyApp

@@ -183,4 +183,8 @@ export const CryptoIcons = [
     name: "Kub Coin",
     src: "/icons/kub.png",
   },
-];
+  {
+    name: "Axie Infinity",
+    src: "/icons/axs.png",
+  },
+]

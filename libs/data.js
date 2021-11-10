@@ -171,6 +171,7 @@ export const CryptoIcons = [
     name: "Alpha Finance Lab",
     src: "/icons/alpha.png",
   },
+  { name: "Tha Sandbox", src: "/icons/sand.png" },
   {
     name: "Balancer",
     src: "/icons/bal.png",
@@ -186,5 +187,13 @@ export const CryptoIcons = [
   {
     name: "Axie Infinity",
     src: "/icons/axs.png",
+  },
+  {
+    name: "Sushi",
+    src: "/icons/sush.png",
+  },
+  {
+    name: "FTX Token",
+    src: "/icons/ftt.png",
   },
 ]

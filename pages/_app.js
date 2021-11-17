@@ -24,12 +24,15 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      <title>Bitcoin</title>
+      <title>Cryptocurrency</title>
       <link rel="icon" href="/icons/btc.png" />
       <nav id="header" className="bg-white fixed w-full z-10 top-0 shadow">
         <div className="w-full container mx-auto flex flex-wrap items-center justify-between my-4">
           <div className="pl-4 md:pl-0">
-            <img src="/icons/btc.png" className="max-w-md mx-auto h-9" />
+            <img
+              src="/icons/btc.png"
+              className="max-w-md mx-auto h-9 ml-0 lg:ml-14"
+            />
           </div>
         </div>
       </nav>

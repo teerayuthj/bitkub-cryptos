@@ -171,7 +171,9 @@ export const CryptoIcons = [
     name: "Alpha Finance Lab",
     src: "/icons/alpha.png",
   },
+  { name: "Ocean Protocol", src: "/icons/ocean.png" },
   { name: "Tha Sandbox", src: "/icons/sand.png" },
+
   {
     name: "Balancer",
     src: "/icons/bal.png",

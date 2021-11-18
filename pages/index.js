@@ -13,9 +13,7 @@ const fetcher = (url) => fetch(url).then((r) => r.json())
 
 export default function Home() {
   const [keyword, setKeyword] = useState("")
-  const { data, error } = useSWR("/api/bitkub", fetcher, {
-    refreshInterval: 2000,
-  })
+  const { data, error } = useSWR("/api/bitkub", fetcher, {})
 
   const cryptos = Object.keys(data || {}).map((v) => ({
     ...data[v],
@@ -54,6 +52,7 @@ export default function Home() {
           </p>
           <SearchInput onChange={onInputChange} />
         </div>
+
         <MarketTable symbols={filterCryptos} />
       </div>
     </Layout>

@@ -36,16 +36,12 @@ export const CryptoIcons = [
     src: "/icons/xrp.png",
   },
   {
-    name: "Bitcoin SV",
-    src: "/icons/bsv.png",
-  },
-  {
     name: "Zilliqa",
     src: "/icons/zil.png",
   },
   {
-    name: "StatusNetwork",
-    src: "/icons/scrt.png",
+    name: "Status",
+    src: "/icons/snt.png",
   },
   {
     name: "Civic",
@@ -68,10 +64,6 @@ export const CryptoIcons = [
     src: "/icons/knc.png",
   },
   {
-    name: "Raiden Network Token",
-    src: "/icons/rdn.png",
-  },
-  {
     name: "Arcblock",
     src: "/icons/abt.png",
   },
@@ -90,10 +82,6 @@ export const CryptoIcons = [
   {
     name: "JFIN",
     src: "/icons/jfin.png",
-  },
-  {
-    name: "Everex",
-    src: "/icons/evx.png",
   },
   {
     name: "Binance Coin",
@@ -132,7 +120,7 @@ export const CryptoIcons = [
     src: "/icons/band.png",
   },
   {
-    name: "COMp",
+    name: "COMP",
     src: "/icons/comp.png",
   },
   {
@@ -148,7 +136,7 @@ export const CryptoIcons = [
     src: "/icons/near.png",
   },
   {
-    name: "Secret",
+    name: "StatusNetwork",
     src: "/icons/scrt.png",
   },
   {
@@ -172,8 +160,8 @@ export const CryptoIcons = [
     src: "/icons/alpha.png",
   },
   { name: "Ocean Protocol", src: "/icons/ocean.png" },
-  { name: "Tha Sandbox", src: "/icons/sand.png" },
-
+  { name: "Synthetix", src: "/icons/snx.png" },
+  { name: "The Sandbox", src: "/icons/sand.png" },
   {
     name: "Balancer",
     src: "/icons/bal.png",
@@ -181,6 +169,10 @@ export const CryptoIcons = [
   {
     name: "Curve DAO Token",
     src: "/icons/crv.png",
+  },
+  {
+    name: "Polygon",
+    src: "/icons/mati.png",
   },
   {
     name: "Kub Coin",
@@ -198,4 +190,16 @@ export const CryptoIcons = [
     name: "FTX Token",
     src: "/icons/ftt.png",
   },
+  { name: "IMX", src: "/icons/imx.png" },
+  { name: "DYDX", src: "/icons/dydx.png" },
+  { name: "ENS", src: "/icons/ens.png" },
+  { name: "ILV", src: "/icons/ilv.png" },
+  { name: "Gala", src: "/icons/gala.png" },
+  { name: "GateToken", src: "/icons/gt.png" },
+  { name: "LUKSO", src: "/icons/LYXe.png" },
+  { name: "GuildFi", src: "/icons/gf.png" },
+  { name: "Sol", src: "/icons/sol.png" },
+  { name: "Avax", src: "/icons/avax.png" },
+  { name: "Terra", src: "/icons/luna.png" },
+  { name: "ApeCoin", src: "/icons/ape.png" },
 ]
